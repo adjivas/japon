@@ -6,14 +6,6 @@ use tokio::io::TryRead;
 use tokio::tcp::TcpStream;
 use tokio::reactor::{Task, Tick};
 
-pub struct Response {
-    pub data: [u8; 80],
-}
-
-pub struct Request {
-    pub data: [u8; 80],
-}
-
 pub struct Connection {
     stream: TcpStream,
     buf: Box<[u8]>,
